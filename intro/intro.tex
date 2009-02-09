@@ -72,16 +72,30 @@ from the board.
 \cleargoban
 \white{a3,a4,b4,c4,d4,e4,e3,e2,e1,d1,c1,c2,b1,b2}
 %
-\showgoban\\White's play at \whitestone[\igotriangle] will capture
+\showgoban\\Figure~1: White's play at \whitestone[\igotriangle] will capture
 both black groups.}
+\end{center}
+
+
+\begin{center}
 %
-\hspace{.5in}%
 \shortstack{
 \cleargoban
 \white{d6,d5,d4,e4,f4,f5,f6,d6,e6}
-\showgoban\\
-Black's play at \blackstone[\igotriangle] will capture the white group.}
+\black{c6,c5,c4,d3,e3,f3,g4,g5,g6,d7,e7,f7}
+\showgoban
+\hspace{.2in}
+\black[\igotriangle]{e5}
+\showgoban
+\hspace{.2in}
+\cleargoban
+\black{c6,c5,c4,d3,e3,f3,g4,g5,g6,d7,e7,f7,e5}
+\showgoban
+\\
+Figure~2: Black's play at \blackstone[\igotriangle] will capture the white group.}
 \end{center}
+Suicidal plays are disallowed, except for the special case where the
+play is a capturing one, as in Figure~2.
 
 
 
@@ -90,17 +104,18 @@ Black's play at \blackstone[\igotriangle] will capture the white group.}
 \cleargoban
 \shortstack{
 \black{}
-\showgoban\\Two Black groups.}
+\showgoban\\Where can black play to capture a white group?}
 \hspace{1in}%
 \shortstack{
 \cleargoban
 \black{}
-\showfullgoban\\One White group.}
+\showgoban\\Where can black play to capture a white group?}
 \hspace{1in}%
 \shortstack{
 \cleargoban
 \black{}
-\showfullgoban\\One White and one Black group.}
+\showgoban\\Where can white play to capture a white group?
+\\(Warning: this is a trick question.)}
 \end{center}
 
 
