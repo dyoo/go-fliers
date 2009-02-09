@@ -24,12 +24,12 @@
 %% The next page includes a small description of the capturing rules,
 %% a few puzzles, and references for more information.
 \section*{Introduction}
-Go is a board game between Black and White.  Like Chess, Black and
-White take turns playing on the intersections of the board.  Unlike
-Chess, the board starts out empty. The goal is not necesarily to
-capture the opponent's pieces, but to take majority control over the
-board.  That being said, control of the board is intimately related to
-capture, so let's show how to capture stones.
+Go is a board game between Black and White.  Black and White take
+turns playing on the intersections of the board.  The board starts out
+empty, and the goal is not necesarily to capture the opponent's
+pieces, but to take majority control over the board.  That being said,
+control of the board is intimately related to capture, so let's show
+how to capture stones.
 
 Adjacent stones of the same color form a \emph{group} that live or die
 together as one.  (Diagonals don't count!)
@@ -60,20 +60,27 @@ from the board.
 
 
 \begin{center}
-\cleargoban
-\shortstack{
-\black{}
-\showgoban\\Two Black groups.}
-\hspace{1in}%
 \shortstack{
 \cleargoban
-\black{}
-\showfullgoban\\One White group.}
-\hspace{1in}%
+\black{a1,a2,b3,c3,d3,d2}
+\white{a3,a4,b4,c4,d4,e4,e3,e2,e1,d1,c1,c2,b1}
+\showgoban
+\hspace{.2in}
+\white[\igotriangle]{b2}
+\showgoban
+\hspace{.2in}
+\cleargoban
+\white{a3,a4,b4,c4,d4,e4,e3,e2,e1,d1,c1,c2,b1,b2}
+%
+\showgoban\\White's play at \whitestone[\igotriangle] will capture
+both black groups.}
+%
+\hspace{.5in}%
 \shortstack{
 \cleargoban
-\black{}
-\showfullgoban\\One White and one Black group.}
+\white{d6,d5,d4,e4,f4,f5,f6,d6,e6}
+\showgoban\\
+Black's play at \blackstone[\igotriangle] will capture the white group.}
 \end{center}
 
 
