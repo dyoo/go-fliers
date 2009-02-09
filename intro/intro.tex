@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx}
+\usepackage{url}
 
 %% http://www.ctan.org/tex-archive/help/Catalogue/entries/igo.html
 \usepackage{igo}
@@ -24,24 +25,88 @@
 %% a few puzzles, and references for more information.
 \section*{Introduction}
 Go is a board game between black and white.  Like Chess, black and
-white take turns, and black goes first.  Unlike Chess, the board
-starts empty, and the goal is not necesarily to capture the opponent's
-pieces, but to take majority control of the board.
+white take turns playing on the intersections of the board.  Unlike
+Chess, the board starts out empty. The goal is not necesarily to
+capture the opponent's pieces, but to take majority control over the
+board.  That being said, control of the board is intimately related to
+capture, so let's show how to capture stones.
 
-That being said, control of the board is intimately related to
-capture, so let's talk about the capturing rule.
+Adjacent stones of the same color form a \emph{group} that live or die
+together as one.  (Diagonals don't count!)
 
+\begin{center}
+\cleargoban
+\gobansize{19}
+\shortstack{
+\black{a1,a2,b3,c3,d3,d2}
+\showgoban\\Two black groups.}
+\hspace{.5in}%
+\shortstack{
+\cleargoban
+\white{d6,d5,d4,e4,f4,f5,f6,d6,e6}
+\showgoban\\One white group.}
+\hspace{.5in}%
+\shortstack{
+\cleargoban
+\black{d9,d10,e8,f9,g8,h9,h10}
+\white{k10,l10,m10,n10,o10,l9,l8,n9,n8}
+\showgoban\\Five black groups and one white group.}
+\end{center}
+%
+A group stays on the board as long as it's adjacent to a vacant
+intersection.  But if the opposing player places a stone that occupies
+the last empty space of a group, that group is captured and removed
+from the board.
+
+
+\begin{center}
+\cleargoban
+\shortstack{
+\black{}
+\showgoban\\Two black groups.}
+\hspace{1in}%
+\shortstack{
+\cleargoban
+\black{}
+\showfullgoban\\One white group.}
+\hspace{1in}%
+\shortstack{
+\cleargoban
+\black{}
+\showfullgoban\\One white and one black group.}
+\end{center}
 
 
 
 \section*{Puzzles}
+\begin{center}
+\cleargoban
+\shortstack{
+\black{}
+\showgoban\\Two black groups.}
+\hspace{1in}%
+\shortstack{
+\cleargoban
+\black{}
+\showfullgoban\\One white group.}
+\hspace{1in}%
+\shortstack{
+\cleargoban
+\black{}
+\showfullgoban\\One white and one black group.}
+\end{center}
+
+
+
 
 %% Game taken from http://www.societies.cam.ac.uk/cugos/go/rules_06.html
 \section*{A 9x9 Game}
-To help give an impression of the game, here's an example of a full game.
+To help give a quick (but incomplete!) impression of the game, here's
+an example of a 9x9 game.
 %
 \begin{center}
 \shortstack{
+\gobansize{9}
 \black[1]{d7,f4,c4,f7,f6,g6,f5,g5,g7,f8}
 \showfullgoban\\Moves 1--10.}
 \hspace{1in}%
@@ -50,16 +115,27 @@ To help give an impression of the game, here's an example of a full game.
 \black[11]{e7,g8,e4,f3,e3,e2,d2,f2,c3,c9}
 \showfullgoban\\Moves 11--20.}
 \hspace{1in}%
-\shortstack{\cleargoban
+\shortstack{
 \cleargobansymbols
-\black[21]{}
+\black[21]{c8,e9,b9,d9,b7,e8,e1,f1,d1,d8}
 \showfullgoban\\Moves 21--30.}
 \end{center}
 %
-In this game, black and white are jostling and pushing against each
-other.  Black has emphasized the left side of the board, white the
-right side.
+Black and white jostle and push against each other.  Black emphasizes
+the left side of the board, and white the right side.  We'll talk
+about how to evaluate the score in our next handout.  But as a teaser:
+at the end of the game, Black gets 26 points, and White gets 25
+points, so Black wins.
 
 
+\section*{For more information...}
+\begin{itemize}
 
+\item \emph{Sensei's Library} (\url{http://senseis.xmp.net/}), a wiki
+  devoted to the game.
+
+\item \emph{The Interactive Way to Go}
+  (\url{http://playgo.to/interactive/}), which gives a more leisurely
+  introduction.
+\end{itemize}
 \end{document}
