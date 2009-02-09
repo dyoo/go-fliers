@@ -1,0 +1,2 @@
+intro.ps:
+	latex intro
