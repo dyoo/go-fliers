@@ -25,8 +25,8 @@
 
 \section*{Eye, eye, eye, eye, stayin' alive, stayin' alive...}
 
-Go is often called the ``surrounding game'', and for good reason!  The
-capturing rule applies when we surround stones.  But another thing we
+Go is often called the ``surrounding game'', and for good reason!  We
+surround stones to capture them.  But another thing we
 surround on the board is empty space.  Groups that surround a large
 amount of empty space resist capture.  In fact, if we surround in a
 particular way, our groups become altogether immune.
@@ -61,11 +61,10 @@ The distinguishing feature about these invincible groups is that
 they've surrounded two distinct empty areas; we call these areas
 \emph{eyes}.  Black can't capture because suicidal moves are
 prohibited.  If a group can form two eyes, even despite the opponent's
-best resistance, then that group is unconditionally \emph{alive}.
+best resistance, then that group is \emph{alive}.
 
 
 \section*{Puzzles}
-Here are a few simple puzzles about the \emph{life and death} of groups.
 \begin{center}
 \shortstack{
 \cleargoban
@@ -115,7 +114,7 @@ Here is an example of a game that's reached its end.
 \cleargobansymbols
 \black[\igotriangle]{g7}
 \showfullgoban\\
-Both players agree that \blackstone[\igotriangle]'s dead.}
+Both players agree that \blackstone[\igotriangle] is dead.}
 \hspace{.3in}
 \shortstack{
 \clear{g7}
@@ -123,12 +122,14 @@ Both players agree that \blackstone[\igotriangle]'s dead.}
 \blackstone[\igotriangle] is given to white.}
 \hspace{.3in}
 \shortstack{
+\gobansymbol{a1,a2,a3,a4,a5,a6,a7,a8,a9,b1,b2,b3,b4,b5,b6,b8,c1,c2,c5,c6,c7,d3,d4,d5,d6,e5,e6}{b}
+\gobansymbol{f9,g1,g2,g3,g4,g7,g9,h1,h2,h3,h4,h5,h6,h7,h8,h9,j1,j2,j3,j4,j5,j6,j7,j8,j9}{w}
 \showfullgoban\\
 Black and White count territories.}
 \end{center}
-
-
-
+Black has 27 territories, and his score is 27.  White has 25
+territories, and since White received 1 captured stone, her total
+score is 26.
 
 \section*{For more information...}
 \begin{itemize}
