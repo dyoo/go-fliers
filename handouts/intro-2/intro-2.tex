@@ -4,7 +4,7 @@
 
 %% http://www.ctan.org/tex-archive/help/Catalogue/entries/igo.html
 \usepackage{igo}
-\gobansize{9}
+\gobansize{13}
 
 \usepackage[empty,cm]{fullpage}
 \begin{document}
@@ -27,48 +27,50 @@
 
 Go is often called the ``surrounding game'', and for good reason!  The
 capturing rule applies when we surround stones.  But another thing we
-surround is empty space.  We may have noticed that groups that
-surround a large amount of empty space are harder to capture.
-
-In fact, if we surround in a particular way, our groups
-become altogether immune.
+surround on the board is empty space.  Groups that surround a large
+amount of empty space resist capture.  In fact, if we surround in a
+particular way, our groups become altogether immune.
 \begin{center}
 \shortstack{
 \cleargoban
-\black{a2,b2,b1,c2,d2,e2,e1}
+\white{a3,b3,b2,b1,c3,d3,e3,e2,e1}
 \showgoban
 }
+\hspace{.2in}
 \shortstack{
 \cleargoban
+\white{a2,a3,b3,b1,c3,c2,c1}
+\showgoban}
+\hspace{.2in}
+%
+\shortstack{
+\cleargoban
+\white{c6,c5,c4,d6,d4,e5,e7,f5,f6,f7}
 \showgoban
 }
+%
+\hspace{.2in}
 \shortstack{
 \cleargoban
+\white{a10,a11,b10,b12,c10,c11,c12,c13}
 \showgoban
 }
 %% diagrams here
 \end{center}
 The distinguishing feature about these invincible groups is that
-they've surrounded two distinct empty areas.  Black can't play to
-completely fill either area because suicidal moves are prohibited.  If
-a group can form two eyes, even despite the opponent's best
-resistance, then that group is \emph{alive}.
+they've surrounded two distinct empty areas; we call these areas
+\emph{eyes}.  Black can't capture because suicidal moves are
+prohibited.  If a group can form two eyes, even despite the opponent's
+best resistance, then that group is \emph{alive}.
 
 
 \section*{Puzzles}
-Here are a few puzzles about the \emph{life and death} of groups.  Try to
-solve them:
+Here are a few puzzles about the \emph{life and death} of groups.
 \begin{center}
-
-%% put puzzles here on life and death
-
-%% 
-
-%% 
-%%
-%% 
-
 \shortstack{
+\cleargoban
+\white{a3,b3,c3,d3,e3,e2,e1}
+\black{a2,b2,c2,d2,d1}
 \showgoban\\
 Black's move.\\Where can Black form eyes?
 }
@@ -91,16 +93,14 @@ White's move.\\Can White interfere with Black's eyes?
 
 Here is an example of a game at its end.
 %% diagram here
-The borders between Black and White are solid, and neither feels they
-can make productive moves any more.  How do we score the game?
-\begin{itemize}
-\item Groups whose capture is inevitable are removed and given to the
-  opponent.
+Once the borders between Black and White are solid, how do we score a game?
+\begin{enumerate}
+\item Groups that can't avoid capture are given to the opponent.
 
-\item Each player counts the whitespace sounded by their remaining
-  groups.  This \emph{territory}, plus the number of captures, forms
-  the player's score.
-\end{itemize}
+\item Each player tallies the empty space they've completely surrounded
+  by his or her groups.  This is \emph{territory}; territory plus the
+  number of captures sums to the player's score.
+\end{enumerate}
 
 
 
