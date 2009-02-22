@@ -61,11 +61,11 @@ The distinguishing feature about these invincible groups is that
 they've surrounded two distinct empty areas; we call these areas
 \emph{eyes}.  Black can't capture because suicidal moves are
 prohibited.  If a group can form two eyes, even despite the opponent's
-best resistance, then that group is \emph{alive}.
+best resistance, then that group is unconditionally \emph{alive}.
 
 
 \section*{Puzzles}
-Here are a few puzzles about the \emph{life and death} of groups.
+Here are a few simple puzzles about the \emph{life and death} of groups.
 \begin{center}
 \shortstack{
 \cleargoban
@@ -76,13 +76,17 @@ Black's move.\\Where can Black form eyes?
 }
 \hspace{.3in}
 \shortstack{
+\cleargoban
+\white{c12,c11,d11,e11,f11,g11,h11,j11,j12,j13}
+\black{d12,e12,f12,f13,g12,h12,h13}
 \showgoban\\
 Black's move.\\Where can Black form eyes?
 }
 \hspace{.3in}
 \shortstack{
 \showgoban\\
-White's move.\\Can White interfere with Black's eyes?
+White's move.\\Can White interfere with Black's eyes?\\
+(\small{\it Your opponent's good move is your good move.})
 }
 \end{center}
 
@@ -91,8 +95,6 @@ White's move.\\Can White interfere with Black's eyes?
 
 \section*{Scoring}
 
-Here is an example of a game at its end.
-%% diagram here
 Once the borders between Black and White are solid, how do we score a game?
 \begin{enumerate}
 \item Groups that can't avoid capture are given to the opponent.
@@ -101,6 +103,29 @@ Once the borders between Black and White are solid, how do we score a game?
   by his or her groups.  This is \emph{territory}; territory plus the
   number of captures sums to the player's score.
 \end{enumerate}
+%
+Here is an example of a game that's reached its end.
+\begin{center}
+\shortstack{
+\cleargoban
+\gobansize{9}
+\black[1]{d7,f4,c4,f7,f6,g6,f5,g5,g7,f8}
+\black[11]{e7,g8,e4,f3,e3,e2,d2,f2,c3,c9}
+\black[21]{c8,e9,b9,d9,b7,e8,e1,f1,d1,d8}
+\cleargobansymbols
+\black[\igotriangle]{g7}
+\showfullgoban\\
+Both players agree that \blackstone[\igotriangle]'s dead.}
+\hspace{.3in}
+\shortstack{
+\clear{g7}
+\showfullgoban\\
+\blackstone[\igotriangle] is given to white.}
+\hspace{.3in}
+\shortstack{
+\showfullgoban\\
+Black and White count territories.}
+\end{center}
 
 
 
@@ -115,5 +140,10 @@ Once the borders between Black and White are solid, how do we score a game?
 \item \emph{The Interactive Way to Go}
   (\url{http://playgo.to/interactive/}), which gives a more leisurely
   introduction.
+
+\item \emph{Go Problems}
+ (\url{http://www.goproblems.com}) is a database of puzzles, many
+  which involve the life and death of groups.
+
 \end{itemize}
 \end{document}
