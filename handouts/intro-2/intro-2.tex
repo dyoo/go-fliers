@@ -23,40 +23,67 @@
 
 \newpage
 
-\section*{Introduction}
-
-Go is often called the ``surrounding game''.  Group capture happens
-when we surround stones.  Another thing we can surround is vacant
-space, and it turns out that surrounding this space can be
-very useful.
-
-
 \section*{Eye, eye, eye, eye, stayin' alive, stayin' alive...}
 
-Concretely, there's a advantage for having a group surround a large
-amount of empty space: such a group is naturally harder to capture
-since it's adjacent to so much space.  In fact, if we surround in a
-particular way, our groups become completely immune to capture.
+Go is often called the ``surrounding game'', and for good reason!  The
+capturing rule applies when we surround stones.  But another thing we
+can surround is empty space.  We may have noticed that groups that
+surround a large amount of empty space are harder to capture.
 
+In fact, if we surround in a particular way, our groups
+become altogether immune.
+\begin{center}
+\shortstack{
+\cleargoban
+\black{a2,b2,b1,c2,d2,e2,e1}
+\showgoban
+}
+\shortstack{
+\cleargoban
+\showgoban
+}
+\shortstack{
+\cleargoban
+\showgoban
+}
 %% diagrams here
+\end{center}
+The distinguishing feature about these invincible groups is that
+they've surrounded two distinct empty areas.  Black can't play to
+completely fill either area because suicidal moves are prohibited.  If
+a group can form two eyes, even despite the opponent's best
+resistance, then that group is \emph{alive}.
 
-The distinguishing feature about these invincible groups is this:
-they've been able to surround at least two separate empty spaces.
-Black can't play to completely fill \igotriangle, because of the
-prohibition against playing suicidal moves.  If a group has two eyes,
-it can dodge capture, even despite an opponent's best resistance.
+
+\section*{Puzzles}
+Here are a few puzzles about the \emph{life and death} of groups.  Try to
+solve them:
+\begin{center}
 
 %% put puzzles here on life and death
 
-%% Black's move.  Can Black form two eyes?
+%% 
 
-%% Black's move.  Does Black need to play at ... immediately, or can
-%% he wait?
+%% 
+%%
+%% 
 
-%% White's move.  Does White need to play at ... immediately, or can
-%% she wait?
+\shortstack{
+\showgoban\\
+Black's move.\\Where can Black form eyes?
+}
+\hspace{.3in}
+\shortstack{
+\showgoban\\
+Black's move.\\Where can Black form eyes?
+}
+\hspace{.3in}
+\shortstack{
+\showgoban\\
+White's move.\\Can White interfere with Black's eyes?
+}
+\end{center}
 
-%% Black's move.  Can Black prevent White from making two eyes?
 
 
 
@@ -67,7 +94,12 @@ Here is an example of a game at its end.
 The borders between Black and White are solid, and neither feels they
 can make productive moves any more.  How do we score the game?
 \begin{itemize}
-\item foo
+\item Groups whose capture is inevitable are removed and given to the
+  opponent.
+
+\item Each player counts the whitespace sounded by their remaining
+  groups.  This \emph{territory}, plus the number of captures, forms
+  the player's score.
 \end{itemize}
 
 
