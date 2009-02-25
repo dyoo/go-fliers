@@ -25,11 +25,11 @@
 
 \section*{Eye, eye, eye, eye, stayin' alive, stayin' alive...}
 
-Go is often called the ``surrounding game'', and for good reason!  We
-surround stones to capture them.  But another thing we
-surround on the board is empty space.  Groups that surround a large
-amount of empty space resist capture.  In fact, if we surround in a
-particular way, our groups become altogether immune.
+Go is often named the ``surrounding game''.  The name is appropriate: we
+surround stones to capture them.  But another thing we surround on the
+board is empty space.  Groups that surround a large amount of empty
+space resist capture.  In fact, if we surround in a particular way,
+our groups become altogether immune.
 \begin{center}
 \shortstack{
 \cleargoban
@@ -57,14 +57,18 @@ particular way, our groups become altogether immune.
 }
 %% diagrams here
 \end{center}
-The distinguishing feature about these invincible groups is that
-they've surrounded two distinct empty areas; we call these areas
-\emph{eyes}.  Black can't capture because suicidal moves are
-prohibited.  If a group can form two eyes, even despite the opponent's
-best resistance, then that group is \emph{alive}.
+These invincible groups have surrounded at least two distinct empty
+areas.  Because suicidal moves are prohibited, Black has no
+possibility to capture these groups.  We call these empty surrounded
+areas \emph{eyes}.  If a group can form at least two eyes, in spite of
+an opponent's best resistance, then that group is \emph{alive}.
+Groups that have no chance to make two eyes are most likely
+\emph{dead}.  (There is a special case of life that doesn't involve
+two eyes, which we'll talk about in a future handout.)
 
 
-\section*{Puzzles}
+Some groups waver on the line between life and death.  Let's take a
+look at a few of these.
 \begin{center}
 \shortstack{
 \cleargoban
@@ -88,7 +92,8 @@ White's move.\\Can White interfere with Black's eyes?\\
 (\small{\it Your opponent's good move is your good move.})
 }
 \end{center}
-
+These particular three examples are simple, but as you might imagine,
+\emph{Life and Death} puzzles can get much more elaborate.
 
 
 
@@ -96,7 +101,9 @@ White's move.\\Can White interfere with Black's eyes?\\
 
 Once the borders between Black and White are solid, how do we score a game?
 \begin{enumerate}
-\item Groups that can't avoid capture are given to the opponent.
+\item Groups that can't avoid capture are given to the opponent.  If
+there's disagreement whether a group has died or not, keep playing
+until mutual agreement is reached.
 
 \item Each player tallies the empty space they've completely surrounded
   by his or her groups.  This is \emph{territory}; we add territory
